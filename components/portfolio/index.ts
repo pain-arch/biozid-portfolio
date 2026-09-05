@@ -5,6 +5,7 @@ export { ServicesSection } from "./ServicesSection";
 export { ServiceCard } from "./ServiceCard";
 export { ShowcaseSection } from "./ShowcaseSection";
 export { WorkGallerySection } from "./WorkGallerySection";
+export { VideoShowcaseSection } from "./VideoShowcaseSection";
 export { AboutSection } from "./AboutSection";
 export {
   SparkleGroup,

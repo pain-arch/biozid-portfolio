@@ -48,6 +48,22 @@ export interface WorkGalleryData {
   }[];
 }
 
+export interface VideoReelItem {
+  id: string;
+  title: string;
+  subtitle?: string;
+  tagline?: string;
+  imageSrc?: string;
+  videoUrl?: string;
+  instagramUrl?: string;
+}
+
+export interface VideoShowcaseData {
+  sectionTitle?: string;
+  embedUrl: string;
+  reels: VideoReelItem[];
+}
+
 export interface PortfolioProps {
   brandName?: string;
   logoSrc?: string;
@@ -60,5 +76,6 @@ export interface PortfolioProps {
   about?: AboutData;
   showcase?: ShowcaseData;
   workGallery?: WorkGalleryData;
+  videoShowcase?: VideoShowcaseData;
 }
 
