@@ -2,6 +2,7 @@ import React from "react";
 import { PortfolioProps } from "@/types/portfolio";
 import { Navbar } from "./Navbar";
 import { HeroSection } from "./HeroSection";
+import { ServicesSection } from "./ServicesSection";
 import { AboutSection } from "./AboutSection";
 
 export function PortfolioView({
@@ -12,6 +13,7 @@ export function PortfolioView({
   ctaText,
   ctaHref,
   hero,
+  services,
   about,
 }: PortfolioProps = {}) {
   return (
@@ -33,6 +35,10 @@ export function PortfolioView({
 
         {/* About Section */}
         <AboutSection data={about} />
+
+        {/* Services Section */}
+        <ServicesSection data={services} />
+
       </main>
     </div>
   );

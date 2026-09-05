@@ -19,6 +19,18 @@ export interface AboutData {
   handwrittenScriptText?: string;
 }
 
+export interface ServiceItem {
+  id: string;
+  title: string;
+  description: string;
+  iconName: "Instagram" | "MessageCircleHeart" | "PenTool" | "Target" | "Palette" | "Sparkles" | string;
+}
+
+export interface ServicesData {
+  sectionTitle: string;
+  items: ServiceItem[];
+}
+
 export interface PortfolioProps {
   brandName?: string;
   logoSrc?: string;
@@ -27,6 +39,7 @@ export interface PortfolioProps {
   ctaText?: string;
   ctaHref?: string;
   hero?: HeroData;
+  services?: ServicesData;
   about?: AboutData;
 }
 
