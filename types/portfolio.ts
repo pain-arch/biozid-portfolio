@@ -31,6 +31,23 @@ export interface ServicesData {
   items: ServiceItem[];
 }
 
+export interface ShowcaseData {
+  title: string;
+  description: string;
+  quote: string;
+  imageSrc: string;
+  imageAlt: string;
+}
+
+export interface WorkGalleryData {
+  title: string;
+  images: {
+    id: string;
+    src: string;
+    alt: string;
+  }[];
+}
+
 export interface PortfolioProps {
   brandName?: string;
   logoSrc?: string;
@@ -41,5 +58,7 @@ export interface PortfolioProps {
   hero?: HeroData;
   services?: ServicesData;
   about?: AboutData;
+  showcase?: ShowcaseData;
+  workGallery?: WorkGalleryData;
 }
 

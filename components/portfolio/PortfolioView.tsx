@@ -4,6 +4,8 @@ import { Navbar } from "./Navbar";
 import { HeroSection } from "./HeroSection";
 import { ServicesSection } from "./ServicesSection";
 import { AboutSection } from "./AboutSection";
+import { ShowcaseSection } from "./ShowcaseSection";
+import { WorkGallerySection } from "./WorkGallerySection";
 
 export function PortfolioView({
   brandName,
@@ -15,6 +17,8 @@ export function PortfolioView({
   hero,
   services,
   about,
+  showcase,
+  workGallery,
 }: PortfolioProps = {}) {
   return (
     <div className="w-full min-h-screen bg-white text-[#080E38] selection:bg-[#FDF184] selection:text-[#080E38] flex flex-col font-sans overflow-x-clip">
@@ -39,6 +43,11 @@ export function PortfolioView({
         {/* Services Section */}
         <ServicesSection data={services} />
 
+        {/* Showcase Section */}
+        <ShowcaseSection data={showcase} />
+
+        {/* Work Gallery Section */}
+        <WorkGallerySection data={workGallery} />
       </main>
     </div>
   );

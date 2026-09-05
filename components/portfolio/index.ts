@@ -3,6 +3,8 @@ export { Navbar } from "./Navbar";
 export { HeroSection } from "./HeroSection";
 export { ServicesSection } from "./ServicesSection";
 export { ServiceCard } from "./ServiceCard";
+export { ShowcaseSection } from "./ShowcaseSection";
+export { WorkGallerySection } from "./WorkGallerySection";
 export { AboutSection } from "./AboutSection";
 export {
   SparkleGroup,
