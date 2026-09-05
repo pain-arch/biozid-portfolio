@@ -17,7 +17,7 @@ const DEFAULT_SHOWCASE_DATA: ShowcaseData = {
 
 export function ShowcaseSection({ data = DEFAULT_SHOWCASE_DATA }: ShowcaseSectionProps) {
   return (
-    <section className="w-full bg-white px-4 sm:px-6 md:px-10 lg:px-16 2xl:px-20 py-16 sm:py-20 md:py-28 relative overflow-hidden">
+    <section id="work" className="w-full bg-white px-4 sm:px-6 md:px-10 lg:px-16 2xl:px-20 py-16 sm:py-20 md:py-28 relative overflow-hidden">
       <div className="w-full max-w-[1750px] mx-auto bg-[#FDF48F] rounded-[2rem] sm:rounded-[3rem] lg:rounded-[4rem] px-6 sm:px-12 md:px-16 lg:px-24 py-16 sm:py-24 lg:py-32 relative">
         
         {/* 2-Column Grid */}

@@ -8,6 +8,11 @@ import { ShowcaseSection } from "./ShowcaseSection";
 import { WorkGallerySection } from "./WorkGallerySection";
 import { VideoShowcaseSection } from "./VideoShowcaseSection";
 
+import { EngagementSection } from "./EngagementSection";
+import { BloombagsSection } from "./BloombagsSection";
+import { SanFernandoSection } from "./SanFernandoSection";
+import { FooterSection } from "./FooterSection";
+
 export function PortfolioView({
   brandName,
   logoSrc,
@@ -21,6 +26,9 @@ export function PortfolioView({
   showcase,
   workGallery,
   videoShowcase,
+  bloombags,
+  sanfernando,
+  footer,
 }: PortfolioProps = {}) {
   return (
     <div className="w-full min-h-screen bg-white text-[#080E38] selection:bg-[#FDF184] selection:text-[#080E38] flex flex-col font-sans overflow-x-clip">
@@ -53,7 +61,19 @@ export function PortfolioView({
 
         {/* Video & Reel Showcase Section */}
         <VideoShowcaseSection data={videoShowcase} />
+
+        {/* Engagement Section */}
+        <EngagementSection />
+
+        {/* Bloombags Section */}
+        <BloombagsSection data={bloombags} />
+
+        {/* San Fernando Section */}
+        <SanFernandoSection data={sanfernando} />
       </main>
+
+      {/* Footer Section */}
+      <FooterSection data={footer} />
     </div>
   );
 }

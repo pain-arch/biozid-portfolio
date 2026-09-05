@@ -77,5 +77,69 @@ export interface PortfolioProps {
   showcase?: ShowcaseData;
   workGallery?: WorkGalleryData;
   videoShowcase?: VideoShowcaseData;
+  bloombags?: BloombagsData;
+  sanfernando?: SanFernandoData;
+  footer?: FooterData;
 }
 
+
+export interface BloombagsItemData {
+  title: string;
+  description: string;
+  imageSrc: string;
+  imageSrc2?: string;
+}
+
+export interface BloombagsContributionsData {
+  title: string;
+  skills: string[];
+  imageSrc1: string;
+  imageSrc2: string;
+}
+
+export interface BloombagsData {
+  title: string;
+  strategicPlanning: BloombagsItemData;
+  contentCreation: BloombagsItemData;
+  communityBuilding: BloombagsItemData;
+  analytics: BloombagsItemData;
+  contributions: BloombagsContributionsData;
+}
+
+export interface SanFernandoItemData {
+  title: string;
+  description?: string;
+  imageSrc?: string;
+  imageSrc2?: string;
+  images?: string[]; // For bottom left 3 images
+}
+
+export interface SanFernandoStatsData {
+  title: string;
+  stats: {
+    value: string;
+    label: string;
+  }[];
+}
+
+export interface SanFernandoData {
+  title: string;
+  strategicPlanning: SanFernandoItemData;
+  contentEditing: SanFernandoItemData;
+  communityBuilding: SanFernandoItemData;
+  analytics: SanFernandoItemData;
+  keyNumbers: SanFernandoStatsData;
+}
+
+export interface FooterContact {
+  phone: string;
+  email: string;
+}
+
+export interface FooterData {
+  topText: string;
+  heading: string;
+  handwrittenWord: string;
+  handwrittenSlashes: string;
+  contact: FooterContact;
+}

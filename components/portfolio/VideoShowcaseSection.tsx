@@ -47,27 +47,29 @@ const DEFAULT_VIDEO_DATA: VideoShowcaseData = {
 export function VideoShowcaseSection({ data = DEFAULT_VIDEO_DATA }: VideoShowcaseSectionProps) {
   const reels = data.reels && data.reels.length > 0 ? data.reels : DEFAULT_VIDEO_DATA.reels;
 
-  // Helper to extract clean embed URL for Instagram iframe
+  // We keep ?hidecaption=true so the footer remains as small and predictable as possible
   const getEmbedUrl = (url?: string) => {
-    if (!url) return "https://www.instagram.com/reel/DYFixHHo4TZ/embed/";
+    if (!url) return "https://www.instagram.com/reel/DYFixHHo4TZ/embed/?hidecaption=true";
     const cleanUrl = url.split("?")[0].replace(/\/$/, "");
-    return `${cleanUrl}/embed/`;
+    return `${cleanUrl}/embed/?hidecaption=true`;
   };
 
   return (
     <section className="w-full bg-white px-4 sm:px-6 md:px-10 lg:px-16 2xl:px-20 py-12 sm:py-16 md:py-24 relative overflow-hidden">
       <div className="w-full max-w-[1750px] mx-auto">
-        {/* 6-Video Live Embedded Grid (3 columns on desktop, 2 on tablet, 1 on mobile) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-start">
           {reels.map((reel) => {
             const embedUrl = getEmbedUrl(reel.instagramUrl);
             return (
               <div
                 key={reel.id}
-                className="group relative w-full aspect-[9/14] sm:aspect-[9/15] md:aspect-[9/15.5] rounded-2xl sm:rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-neutral-200/40 bg-black"
+                className="group relative w-full aspect-[9/16] rounded-2xl sm:rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-neutral-200/40 bg-black pointer-events-auto"
               >
-                {/* Pure playable video area: perfectly cropped so only the video is visible */}
-                <div className="absolute inset-0 w-full h-[155%] -top-[48px] overflow-hidden pointer-events-auto">
+                {/* The absolute wrapper uses top/bottom coordinates instead of height calculations.
+                  This ensures the frame is always oversized on the top and bottom regardless of browser bugs,
+                  allowing the parent aspect-[9/16] to perfectly clip the header and footer.
+                */}
+                <div className="absolute left-0 right-0 top-[-54px] bottom-[-250px]">
                   <iframe
                     src={embedUrl}
                     className="w-full h-full border-0"

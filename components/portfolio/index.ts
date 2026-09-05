@@ -14,3 +14,7 @@ export {
   AboutMeScript,
 } from "./DecorativeGraphics";
 
+export * from "./EngagementSection";
+export * from "./BloombagsSection";
+export * from "./SanFernandoSection";
+export * from "./FooterSection";
