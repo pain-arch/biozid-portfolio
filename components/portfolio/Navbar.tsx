@@ -47,12 +47,9 @@ export function Navbar({
             <Image
               src={logoSrc}
               alt={logoAlt}
-              width={48}
-              height={48}
               width={60}
               height={60}
               priority
-              className="h-16 w-16 sm:h-12 sm:w-12 object-contain hover:scale-105 transition-transform"
               className="h-12 w-12 sm:h-[58px] sm:w-[58px] object-contain hover:scale-105 transition-transform"
             />
           ) : (
