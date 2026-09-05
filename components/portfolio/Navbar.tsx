@@ -47,10 +47,10 @@ export function Navbar({
             <Image
               src={logoSrc}
               alt={logoAlt}
-              width={60}
-              height={60}
+              width={64}
+              height={64}
               priority
-              className="h-12 w-12 sm:h-[58px] sm:w-[58px] object-contain hover:scale-105 transition-transform"
+              className="h-[53px] w-[53px] sm:h-16 sm:w-16 object-contain hover:scale-105 transition-transform"
             />
           ) : (
             <span className="text-xl sm:text-2xl font-bold tracking-tight text-[#080E38]">
