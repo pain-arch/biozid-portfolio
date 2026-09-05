@@ -96,7 +96,7 @@ export function Navbar({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden w-full bg-white/95 backdrop-blur-md border-b border-neutral-200 px-6 py-6 transition-all animate-in fade-in slide-in-from-top-4 duration-200">
+        <div className="absolute top-full left-0 md:hidden w-full bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-xl px-6 py-6 transition-all animate-in fade-in slide-in-from-top-4 duration-200">
           <div className="flex flex-col gap-4">
             {navItems.map((item) => (
               <Link
