@@ -11,10 +11,8 @@ const DEFAULT_SERVICES_DATA: ServicesData = {
   items: [
     {
       id: "s1",
-      title: "Instagram Management",
       title: "Social Media Management",
       description: "Boosting growth with smart content and consistent engagement.",
-      iconName: "Instagram",
       iconName: "Share2",
     },
     {
