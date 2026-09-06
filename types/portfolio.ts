@@ -79,6 +79,7 @@ export interface PortfolioProps {
   videoShowcase?: VideoShowcaseData;
   bloombags?: BloombagsData;
   sanfernando?: SanFernandoData;
+  copywriting?: CopywritingData;
   footer?: FooterData;
 }
 
@@ -142,4 +143,14 @@ export interface FooterData {
   handwrittenWord: string;
   handwrittenSlashes: string;
   contact: FooterContact;
+}
+
+export interface CopywritingItem {
+  id: string;
+  title: string;
+  imageSrc: string;
+}
+
+export interface CopywritingData {
+  items: CopywritingItem[];
 }

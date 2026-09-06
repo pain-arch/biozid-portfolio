@@ -11,6 +11,7 @@ import { VideoShowcaseSection } from "./VideoShowcaseSection";
 import { EngagementSection } from "./EngagementSection";
 import { BloombagsSection } from "./BloombagsSection";
 import { SanFernandoSection } from "./SanFernandoSection";
+import { CopywritingSection } from "./CopywritingSection";
 import { FooterSection } from "./FooterSection";
 
 export function PortfolioView({
@@ -28,6 +29,7 @@ export function PortfolioView({
   videoShowcase,
   bloombags,
   sanfernando,
+  copywriting,
   footer,
 }: PortfolioProps = {}) {
   return (
@@ -70,6 +72,9 @@ export function PortfolioView({
 
         {/* San Fernando Section */}
         <SanFernandoSection data={sanfernando} />
+        
+        {/* Copywriting Section */}
+        <CopywritingSection data={copywriting} />
       </main>
 
       {/* Footer Section */}

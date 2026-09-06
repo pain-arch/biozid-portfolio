@@ -18,3 +18,4 @@ export * from "./EngagementSection";
 export * from "./BloombagsSection";
 export * from "./SanFernandoSection";
 export * from "./FooterSection";
+export * from "./CopywritingSection";
