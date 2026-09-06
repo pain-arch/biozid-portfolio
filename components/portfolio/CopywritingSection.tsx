@@ -8,21 +8,29 @@ const DEFAULT_COPYWRITING_DATA: CopywritingData = {
       id: "brand-voice",
       title: "Brand Voice + Pre-Launch Hype",
       imageSrc: "/copywritings/copywritings.png",
+      width: 499,
+      height: 430,
     },
     {
       id: "campaign",
       title: "Campaign Announcements+ Promotions",
       imageSrc: "/copywritings/copywritings1.png",
+      width: 499,
+      height: 466,
     },
     {
       id: "conversion",
       title: "Conversion-Focused Copy",
       imageSrc: "/copywritings/copywritings2.png",
+      width: 664,
+      height: 193,
     },
     {
       id: "intro",
       title: "Brand Messaging or App Introductory Copy",
       imageSrc: "/copywritings/copywritings3.png",
+      width: 677,
+      height: 185,
     },
   ],
 };
@@ -45,12 +53,13 @@ export function CopywritingSection({ data = DEFAULT_COPYWRITING_DATA }: { data?:
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {items.map((item) => (
-            <div key={item.id} className="w-full relative aspect-[4/5] sm:aspect-square lg:aspect-[4/3]">
+            <div key={item.id} className="w-full flex items-start">
               <Image 
                 src={item.imageSrc} 
                 alt={item.title} 
-                fill 
-                className="object-contain" 
+                width={item.width || 1000}
+                height={item.height || 1000}
+                className="w-full h-auto object-contain" 
               />
             </div>
           ))}

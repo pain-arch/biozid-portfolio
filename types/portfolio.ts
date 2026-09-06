@@ -149,6 +149,8 @@ export interface CopywritingItem {
   id: string;
   title: string;
   imageSrc: string;
+  width?: number;
+  height?: number;
 }
 
 export interface CopywritingData {
