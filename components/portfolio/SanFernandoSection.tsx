@@ -7,15 +7,15 @@ const DEFAULT_SANFERNANDO_DATA: SanFernandoData = {
   strategicPlanning: {
     title: "STRATEGIC PLANNING",
     description: "DEVELOPED AND EXECUTED CONTENT CALENDARS ALIGNED WITH BRAND GOALS",
-    imageSrc: "/sanfarnando4.jpg",
+    imageSrc: "/sanfarnando1.jpg",
   },
   contentEditing: {
     title: "CONTENT EDITNG",
     description: "CURATED AND EDITED THE CONTENTS OF THE BRAND",
-    imageSrc: "/sanfarnando1.jpg",
+    imageSrc: "/sanfarnando4.jpg",
   },
   communityBuilding: {
-    title: "COMMUNITY BUILDING",
+    title: "",
     images: ["/sanfarnando5.jpg", "/sanfarnando6.jpg", "/sanfarnando7.jpg"],
   },
   analytics: {
